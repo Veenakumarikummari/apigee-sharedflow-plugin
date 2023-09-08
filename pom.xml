@@ -31,34 +31,6 @@
 		<target.root.dir>${basedir}/target</target.root.dir>
 		<apigee.deploy.version>1</apigee.deploy.version>
 	</properties>
-	<profiles>
-		<profile>
-			<id>proxy_de</id>
-			<properties>
-				<apigee.profile>proxy_de</apigee.profile>
-				<apigee.env>eval</apigee.env>
-				<apigee.hosturl>https://apigee.googleapis.com</apigee.hosturl>
-				<apigee.apiversion>v1</apigee.apiversion>
-				<apigee.org>esi-apigee-x-394004</apigee.org>
-				<apigee.options>async</apigee.options>
-				<apigee.bearer>${bearer}</apigee.bearer>
-			</properties>
-		</profile>
-		<profile>
-			<!-- Next Generation SaaS and hybrid -->
-			<id>config_de</id>
-			<properties>
-				<apigee.profile>config_de</apigee.profile>
-				<apigee.env>eval</apigee.env>
-				<apigee.hosturl>https://apigee.googleapis.com</apigee.hosturl>
-				<apigee.apiversion>v1</apigee.apiversion>
-				<apigee.org>esi-apigee-x-394004</apigee.org>
-				<apigee.config.dir>${dir}</apigee.config.dir>
-				<apigee.config.options>update</apigee.config.options>
-				<apigee.bearer>${bearer}</apigee.bearer>
-			</properties>
-		</profile>
-	</profiles>
 	<build>
 		<plugins>
 			<!-- copy the full apiproxy folder to target folder -->
@@ -93,7 +65,7 @@
 			<plugin>
 				<groupId>io.apigee.build-tools.enterprise4g</groupId>
 				<artifactId>apigee-edge-maven-plugin</artifactId>
-				<version>2.4.1</version>
+				<version>2.4.4</version>
 				<executions>
 					<execution>
 						<id>configure-bundle-step</id>
