@@ -1,5 +1,4 @@
----
-name: Apigee KVM deploy
+name: Apigee sharedflow deploy
 on:
   workflow_dispatch:
     inputs:
